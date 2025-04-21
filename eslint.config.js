@@ -35,7 +35,7 @@ export default [
       'array-callback-return': 'error',
       'default-case': 'error',
       'dot-notation': 'error',
-      'max-len': ['error', { code: 100 }],
+      'max-len': ['error', { code: 150 }],
       'newline-before-return': 'error',
       'no-shadow': 'error',
       'no-param-reassign': ['error', { props: true }],

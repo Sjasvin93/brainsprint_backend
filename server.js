@@ -5,8 +5,10 @@ import http from 'http';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
+import connectDB from './src/config/db.config.js';
 
 dotenv.config();
+connectDB();
 
 const app = express();
 const httpServer = http.createServer(app);
