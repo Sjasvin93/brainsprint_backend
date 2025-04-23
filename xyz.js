@@ -1,20 +1,19 @@
-import promise from 'eslint-plugin-promise';
-import security from 'eslint-plugin-security';
-import prettier from 'eslint-plugin-prettier';
+// eslint.config.js
+import eslintPluginPromise from 'eslint-plugin-promise';
+import eslintPluginSecurity from 'eslint-plugin-security';
+import eslintPluginPrettier from 'eslint-plugin-prettier';
 
 export default [
   {
     files: ['**/*.{js,mjs,cjs}'],
-    plugins: {
-      promise,
-      security,
-      prettier,
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     },
-    // Directly include the configuration objects rather than using "extends"
-    settings: {
-      promise: {
-        // Specific settings for eslint-plugin-promise if needed
-      },
+    plugins: {
+      promise: eslintPluginPromise,
+      security: eslintPluginSecurity,
+      prettier: eslintPluginPrettier,
     },
     rules: {
       camelcase: ['error', { properties: 'always' }],

@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import connectDB from './src/config/db.config.js';
+import { sendApiResponse } from './src/config/api_response.js';
 
 dotenv.config();
 connectDB();
@@ -13,7 +14,6 @@ connectDB();
 const app = express();
 const httpServer = http.createServer(app);
 
-// Middleware
 app.use(express.json({ limit: '30mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors('*'));
